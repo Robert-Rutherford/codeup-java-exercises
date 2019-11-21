@@ -24,10 +24,17 @@ public class ConsoleExercises {
 //        System.out.println("Word 3: " + userInput3);
 
 
-        System.out.print("Enter a sentence: ");
-        String userInput = scanner.nextLine();
+//        System.out.print("Enter a sentence: ");
+//        String userInput = scanner.nextLine();
+//
+//        System.out.println("Sentence: " + userInput);
 
-        System.out.println("Sentence: " + userInput);
+        System.out.print("Enter length and width: ");
+        int userInput1 = scanner.nextInt();
+        int userInput2 = scanner.nextInt();
+
+        System.out.println("length: " + userInput1);
+        System.out.println("width: " + userInput2);
 
 
 
