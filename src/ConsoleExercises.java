@@ -23,27 +23,31 @@ public class ConsoleExercises {
 //        System.out.println("Word 2: " + userInput2);
 //        System.out.println("Word 3: " + userInput3);
 
-
+//        scanner.nextLine();
 //        System.out.print("Enter a sentence: ");
-//        String userInput = scanner.nextLine();
+//        String sentence = scanner.nextLine();
+//        System.out.println("Sentence: " + sentence);
+
+//        System.out.print("Enter length: ");
+//        float length = Float.parseFloat(scanner.nextLine());
+//        System.out.print("Enter width: ");
+//        float width = Float.parseFloat(scanner.nextLine());
+//        System.out.print("Enter height: ");
+//        float height = Float.parseFloat(scanner.nextLine());
 //
-//        System.out.println("Sentence: " + userInput);
+//        float perimeter = (length*2) + (width*2);
+//        float area = length*width;
+//        float volume = length*width*height;
+//        System.out.printf("Perimeter: %.2f %n", perimeter);
+//        System.out.printf("Area: %.2f %n", area);
+//        System.out.printf("Volume: %.2f %n", volume);
 
-        System.out.print("Enter length: ");
-        int userInput1 = Integer.parseInt(scanner.nextLine());
-        System.out.print("Enter width: ");
-        int userInput2 = Integer.parseInt(scanner.nextLine());
-        System.out.print("Enter height: ");
-        int userInput3 = Integer.parseInt(scanner.nextLine());
+        Scanner sc = new Scanner(System.in);
 
-        int perimeter = (userInput1*2) + (userInput2*2);
-        int area = userInput1*userInput2;
-        int volume = userInput1*userInput2*userInput3;
-        System.out.println("Perimeter: " + perimeter);
-        System.out.println("Area: " + area);
-        System.out.println("Volume: " + volume);
+        sc.useDelimiter("-");
 
-
+        String str = sc.next();
+        System.out.println(str);
 
 
     }
