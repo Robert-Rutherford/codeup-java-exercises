@@ -33,6 +33,11 @@ public class ControlFlowExercises {
 //        }
 //        System.out.println();
 
+        for (int q= 5; q <= 15; q++){
+            System.out.printf("%s ",q);
+        }
+        System.out.println();
+
         for (int o = 0; o <=100; o++){
             if (o % 3 == 0 && o % 5 == 0){
                 System.out.println("fizzbuzz");
