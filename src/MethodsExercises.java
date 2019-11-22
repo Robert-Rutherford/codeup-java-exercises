@@ -27,7 +27,7 @@ public class MethodsExercises {
         diceRoll(sides);
 
 //       Problem 5
-
+        guessGame();
 
     }
 
