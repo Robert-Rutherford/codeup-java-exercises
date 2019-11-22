@@ -26,8 +26,6 @@ public class MethodsExercises {
         int sides = scanner.nextInt();
         diceRoll(sides);
 
-//       Problem 5
-        guessGame();
 
     }
 
@@ -56,12 +54,17 @@ public class MethodsExercises {
     private static int getInteger(int min, int max) {
         Scanner sc = new Scanner(System.in);
         int input = sc.nextInt();
+//        if (!(input > min && input < max)){
+//            System.out.printf("Number is not within range...%nEnter a number between %s and %s: ", min, max);
+//            getInteger(min,max);
+//        }
         while (input < min || input > max) {
             System.out.printf("Number is not within range...%nEnter a number between %s and %s: ", min, max);
             input = sc.nextInt();
         }
         System.out.println("Number within Range...\nEnding problem 2...");
         return input;
+
     }
 //    Problem 3
     private static void factorial(int min, int max){
@@ -70,7 +73,7 @@ public class MethodsExercises {
         int number = getInteger(min,max);
         int total = 1;
         boolean continueLoop = true;
-        while (continueLoop){
+//        while (continueLoop){
             System.out.printf("%s! = ",number);
             for (int i = 1; i <= number; i++){
                 if (i == number){
@@ -84,21 +87,20 @@ public class MethodsExercises {
             System.out.println("Continue? (Yes/No)");
             String continueInput = sc.next();
             if (continueInput.equalsIgnoreCase("yes")){
-                System.out.printf("Enter a number between %s and %s: ",min, max);
-                number = getInteger(min,max);
-                total = 1;
+                factorial(min, max);
             }else {
                 System.out.println("Ending function...");
-                continueLoop = false;
+//                continueLoop = false;
             }
-        }
+//        }
     }
+
 //  Problem 4
     private static void diceRoll(int sidesNum){
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
-        boolean loop = true;
-        while (loop){
+//        boolean loop = true;
+//        while (loop){
             System.out.print("Roll? (yes/no): ");
             String rollInput = sc.next();
             if (rollInput.equalsIgnoreCase("yes")){
@@ -109,16 +111,14 @@ public class MethodsExercises {
                 }
                 System.out.println();
                 System.out.println();
+                diceRoll(sidesNum);
             }else if (rollInput.equalsIgnoreCase("no")){
-                loop = false;
-            }else {
+//                loop = false;
+            } else {
                 System.out.println("Error: please enter yes or no...");
+                diceRoll(sidesNum);
             }
-        }
-    }
-//  Problem 5
-    private static void guessGame(){
-
+//        }
     }
 
 }
