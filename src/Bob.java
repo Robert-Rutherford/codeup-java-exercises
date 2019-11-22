@@ -7,13 +7,13 @@ public class Bob {
 
         String input = sc.nextLine();
 
-        if (input.endsWith("?")){
+        if (input.endsWith("?")) {
             System.out.println("Bob: Sure");
-        }else if (input.endsWith("!")){
+        } else if (input.endsWith("!")) {
             System.out.println("Bob: Whoa, chill out!");
-        }else if (input.equals("")){
+        } else if (input.equals("")) {
             System.out.println("Bob: Fine. Be that way!");
-        }else {
+        } else {
             System.out.println("Bob: Whatever.");
         }
 

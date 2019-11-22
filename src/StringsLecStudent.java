@@ -17,25 +17,25 @@ public class StringsLecStudent {
 
         //  If the input is an exact match to String name...
         //  Print message: "Welcome Jane Doe!"
-        if (matchInput){
+        if (matchInput) {
             System.out.println("Welcome Jane Doe!");
         }
 
         //  If the input is not capitalized correctly...
         //  Print message: "Names are proper nouns."
-        else if (input.equalsIgnoreCase(name)){
+        else if (input.equalsIgnoreCase(name)) {
             System.out.println("Names are proper nouns.");
         }
 
         //  If the input starts with "Jane"...
         //  Print message: "Hi Jane!"
-        if (input.startsWith("Jane")){
+        if (input.startsWith("Jane")) {
             System.out.println("Hi Jane!");
         }
 
         //  If the input ends with "Doe"...
         //  Print message: "Doe, a deer..."
-        if (input.endsWith("Doe")){
+        if (input.endsWith("Doe")) {
             System.out.println("Doe, a deer...");
         }
 
@@ -44,25 +44,25 @@ public class StringsLecStudent {
          *  String manipulation method.
          */
 
-//        System.out.println(name.charAt(3));
-//        System.out.println(name.indexOf("Doe"));
-//        System.out.println(name.lastIndexOf("e"));
-//        System.out.println(name.length());
-//        System.out.println(name.replace("Doe", "Smith"));
-//        System.out.println(name.substring(3));
-//        System.out.println(name.substring(0,3));
-//        System.out.println(name.toLowerCase());
-//        System.out.println(name.toUpperCase());
+        System.out.println(name.charAt(3));
+        System.out.println(name.indexOf("Doe"));
+        System.out.println(name.lastIndexOf("e"));
+        System.out.println(name.length());
+        System.out.println(name.replace("Doe", "Smith"));
+        System.out.println(name.substring(3));
+        System.out.println(name.substring(0, 3));
+        System.out.println(name.toLowerCase());
+        System.out.println(name.toUpperCase());
 
 
         // trim is really useful for catching user errors on input.
-//        String trimThis = "    too many spaces   ";
+        String trimThis = "    too many spaces   ";
 
-//        System.out.println(trimThis);
-//        System.out.println(trimThis.trim());
+        System.out.println(trimThis);
+        System.out.println(trimThis.trim());
 
         // How would we fix this?
-//        System.out.println("Here is a backslash \");
+        System.out.println("Here is a backslash \\");
 
     }
 }
