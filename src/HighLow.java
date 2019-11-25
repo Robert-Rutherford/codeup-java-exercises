@@ -2,6 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class HighLow {
+
     public static void main(String[] args) {
         Random random = new Random();
         highLow(random.nextInt(99)+1,0,15);
