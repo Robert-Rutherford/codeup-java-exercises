@@ -72,7 +72,7 @@ public class MethodsExercises {
         System.out.printf("Enter a number between %s and %s: ",min, max);
         int number = getInteger(min,max);
         int total = 1;
-        boolean continueLoop = true;
+//        boolean continueLoop = true;
 //        while (continueLoop){
             System.out.printf("%s! = ",number);
             for (int i = 1; i <= number; i++){
