@@ -71,7 +71,7 @@ public class MethodsExercises {
         Scanner sc = new Scanner(System.in);
         System.out.printf("Enter a number between %s and %s: ",min, max);
         int number = getInteger(min,max);
-        int total = 1;
+        long total = 1;
 //        boolean continueLoop = true;
 //        while (continueLoop){
             System.out.printf("%s! = ",number);
