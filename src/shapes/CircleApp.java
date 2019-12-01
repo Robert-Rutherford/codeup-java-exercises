@@ -4,6 +4,7 @@ import util.Input;
 
 public class CircleApp {
     private static int circlesCreated;
+
     public static void main(String[] args) {
         Input inputUtil = new Input();
         circlesCreated = 0;
@@ -14,8 +15,8 @@ public class CircleApp {
             System.out.printf("Circumference: %.2f%n", circle.getCircumference());
             circlesCreated++;
             System.out.println();
-        }while (inputUtil.yesNo("Continue? (yes/no)"));
-        System.out.printf("Exiting program. Created %s circle(s).%n",circlesCreated);
+        } while (inputUtil.yesNo("Continue? (yes/no)"));
+        System.out.printf("Exiting program. Created %s circle(s).%n", circlesCreated);
 
     }
 }

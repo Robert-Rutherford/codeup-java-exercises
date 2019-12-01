@@ -6,23 +6,22 @@ public class ArraysExercises {
 //        int[] numbers = {1, 2, 3, 4, 5};
 //        System.out.println(numbers);
 
-        String[] personArray = {"John","Bob","Phil"};
+        String[] personArray = {"John", "Bob", "Phil"};
         String newPerson = "Jack";
-        String[] addedArray = addPerson(personArray,newPerson);
+        String[] addedArray = addPerson(personArray, newPerson);
         System.out.println(Arrays.toString(addedArray));
 
 //        Problem 2
 
 
-
     }
 
-    private static String[] addPerson(String[] arr, String newPerson){
-        String[] returnArr = new String[arr.length+1];
-        for (int i = 0; i<arr.length;i++){
+    private static String[] addPerson(String[] arr, String newPerson) {
+        String[] returnArr = new String[arr.length + 1];
+        for (int i = 0; i < arr.length; i++) {
             returnArr[i] = arr[i];
         }
-        returnArr[arr.length]= newPerson;
+        returnArr[arr.length] = newPerson;
         return returnArr;
     }
 }

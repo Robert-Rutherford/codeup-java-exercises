@@ -4,11 +4,11 @@ public class Movie {
     private static String[] names;
     private static String[] category;
 
-    public static void Movie(String[] name,String[] cat){
+    public static void Movie(String[] name, String[] cat) {
         names = name;
     }
 
-    public static void setCategory(String[] arr){
+    public static void setCategory(String[] arr) {
         category = arr;
     }
 }

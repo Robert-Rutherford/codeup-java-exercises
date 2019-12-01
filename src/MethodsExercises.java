@@ -18,7 +18,7 @@ public class MethodsExercises {
         int userInput = getInteger(1, 10);
 
 //      Problem 3
-        factorial(1,10);
+        factorial(1, 10);
 
 //      Problem 4
         Scanner scanner = new Scanner(System.in);
@@ -66,58 +66,59 @@ public class MethodsExercises {
         return input;
 
     }
-//    Problem 3
-    private static void factorial(int min, int max){
+
+    //    Problem 3
+    private static void factorial(int min, int max) {
         Scanner sc = new Scanner(System.in);
-        System.out.printf("Enter a number between %s and %s: ",min, max);
-        int number = getInteger(min,max);
+        System.out.printf("Enter a number between %s and %s: ", min, max);
+        int number = getInteger(min, max);
         long total = 1;
 //        boolean continueLoop = true;
 //        while (continueLoop){
-            System.out.printf("%s! = ",number);
-            for (int i = 1; i <= number; i++){
-                if (i == number){
-                    System.out.printf("%s",i);
-                }else {
-                    System.out.printf("%s x ",i);
-                }
-                total *= i;
+        System.out.printf("%s! = ", number);
+        for (int i = 1; i <= number; i++) {
+            if (i == number) {
+                System.out.printf("%s", i);
+            } else {
+                System.out.printf("%s x ", i);
             }
-            System.out.printf(" = %s %n",total);
-            System.out.println("Continue? (Yes/No)");
-            String continueInput = sc.next();
-            if (continueInput.equalsIgnoreCase("yes")){
-                factorial(min, max);
-            }else {
-                System.out.println("Ending function...");
+            total *= i;
+        }
+        System.out.printf(" = %s %n", total);
+        System.out.println("Continue? (Yes/No)");
+        String continueInput = sc.next();
+        if (continueInput.equalsIgnoreCase("yes")) {
+            factorial(min, max);
+        } else {
+            System.out.println("Ending function...");
 //                continueLoop = false;
-            }
+        }
 //        }
     }
 
-//  Problem 4
-    private static void diceRoll(int sidesNum){
+    //  Problem 4
+    private static void diceRoll(int sidesNum) {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
 //        boolean loop = true;
 //        while (loop){
-            System.out.print("Roll? (yes/no): ");
-            String rollInput = sc.next();
-            if (rollInput.equalsIgnoreCase("yes")){
-                System.out.println();
-                System.out.print("Dice Rolls: ");
-                for (int i =1;i<=2;i++){
-                    System.out.printf("%s ", (random.nextInt(sidesNum -1)+1));
-                }
-                System.out.println();
-                System.out.println();
-                diceRoll(sidesNum);
-            }else if (rollInput.equalsIgnoreCase("no")){
-//                loop = false;
-            } else {
-                System.out.println("Error: please enter yes or no...");
-                diceRoll(sidesNum);
+        System.out.print("Roll? (yes/no): ");
+        String rollInput = sc.next();
+        if (rollInput.equalsIgnoreCase("yes")) {
+            System.out.println();
+            System.out.print("Dice Rolls: ");
+            for (int i = 1; i <= 2; i++) {
+                System.out.printf("%s ", (random.nextInt(sidesNum - 1) + 1));
             }
+            System.out.println();
+            System.out.println();
+            diceRoll(sidesNum);
+        } else if (rollInput.equalsIgnoreCase("no")) {
+//                loop = false;
+        } else {
+            System.out.println("Error: please enter yes or no...");
+            diceRoll(sidesNum);
+        }
 //        }
     }
 
