@@ -87,7 +87,7 @@ public class Input {
         return scanner.nextDouble();
     }
 
-    public void cleanLines(){
+    public void cleanLines() {
         scanner.nextLine();
     }
 }

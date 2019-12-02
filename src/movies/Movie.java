@@ -9,11 +9,11 @@ public class Movie {
         category = cat;
     }
 
-    public String movieName(){
+    public String movieName() {
         return names;
     }
 
-    public String movieCat(){
+    public String movieCat() {
         return category;
     }
 
