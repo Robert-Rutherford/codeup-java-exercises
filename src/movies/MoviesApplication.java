@@ -5,13 +5,14 @@ import java.util.Arrays;
 
 public class MoviesApplication {
     public static Input userIn = new Input();
+    public static Movie[] allMovies = MoviesArray.findAll();
 
     public static void main(String[] args) {
         movieApp();
     }
 
     private static void movieApp(){
-//        System.out.println("What would you like to do?\n");
+
         int menuPrompt = userIn.getInt("What would you like to do?\n" +
                 "\n" +
                 "0 - exit\n" +
@@ -20,8 +21,9 @@ public class MoviesApplication {
                 "3 - view movies in the drama category\n" +
                 "4 - view movies in the horror category\n" +
                 "5 - view movies in the scifi category\n" +
+                "6 - Add a movie\n"+
                 "\n" +
-                "Enter your choice: ", 0,5);
+                "Enter your choice: ", 0,6);
         System.out.println();
         System.out.println("*----*----*----*----*----*----*----*----*----*");
         switch (menuPrompt){
@@ -29,14 +31,13 @@ public class MoviesApplication {
                 System.exit(0);
                 break;
             case 1:
-                Movie[] allMovies = MoviesArray.findAll();
+//                Movie[] allMovies = MoviesArray.findAll();
                 for (Movie movieArray : allMovies) {
-//                    System.out.println(movieArray.movieName());
                     printMovie(movieArray.movieName(),movieArray.movieCat());
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");
 
-//                System.out.println(Arrays.toString(MoviesArray.findAll()));
+
                 movieApp();
                 break;
             case 2:
@@ -75,9 +76,12 @@ public class MoviesApplication {
 
                 movieApp();
                 break;
+            case 6:
+                allMovies = addMovie(allMovies);
+                movieApp();
+                break;
             default:
-                System.out.println("*----*----*----*----*----*----*----*----*----*");
-
+                System.out.println();
                 movieApp();
                 break;
         }
@@ -88,7 +92,6 @@ public class MoviesApplication {
     }
 
     private static Movie[] filterMovies(String cat){
-        Movie[] allMovies = MoviesArray.findAll();
         int arrayLength = countCat(allMovies,cat);
         Movie[] filteredMovies = new Movie[arrayLength];
         int index = 0;
@@ -109,6 +112,18 @@ public class MoviesApplication {
             }
         }
         return returnNum;
+    }
+
+//  Bonus
+    private static Movie[] addMovie(Movie[] moviesList){
+        int newLength = moviesList.length+1;
+        Movie[] newList = new Movie[newLength];
+        System.arraycopy(moviesList, 0, newList, 0, moviesList.length);
+        userIn.cleanLines();
+        String titlePrompt = userIn.getString("Enter the Movie Title: ");
+        String catPrompt = userIn.getString("Enter the movie category: ");
+        newList[newLength-1] = new Movie(titlePrompt,catPrompt);
+        return newList;
     }
 
 

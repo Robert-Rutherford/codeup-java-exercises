@@ -86,4 +86,8 @@ public class Input {
         System.out.println("Enter a double");
         return scanner.nextDouble();
     }
+
+    public void cleanLines(){
+        scanner.nextLine();
+    }
 }
