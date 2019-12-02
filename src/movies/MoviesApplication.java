@@ -22,7 +22,7 @@ public class MoviesApplication {
                 "3 - view movies in the drama category\n" +
                 "4 - view movies in the horror category\n" +
                 "5 - view movies in the scifi category\n" +
-                "6 - Bonus:\n" +
+                "**** Bonuses ****\n" +
                 "6 - Add a movie\n" +
                 "7 - Search for movies by custom category\n" +
                 "8 - Search for movies by title\n" +
@@ -41,7 +41,6 @@ public class MoviesApplication {
                     printMovie(movieArray.movieName(), movieArray.movieCat());
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");
-                movieApp();
                 break;
             case 2:
                 Movie[] animatedMovie = filterMovies("animated");
@@ -51,8 +50,6 @@ public class MoviesApplication {
                     }
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");
-
-                movieApp();
                 break;
             case 3:
                 Movie[] dramaMovie = filterMovies("drama");
@@ -62,8 +59,6 @@ public class MoviesApplication {
                     }
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");
-
-                movieApp();
                 break;
             case 4:
                 Movie[] horrorMovie = filterMovies("horror");
@@ -73,8 +68,6 @@ public class MoviesApplication {
                     }
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");
-
-                movieApp();
                 break;
             case 5:
                 Movie[] scifiMovie = filterMovies("scifi");
@@ -84,20 +77,15 @@ public class MoviesApplication {
                     }
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");
-
-                movieApp();
                 break;
             case 6:
                 allMovies = addMovie(allMovies);
-                movieApp();
                 break;
             case 7:
                 customCategory();
-                movieApp();
                 break;
             case 8:
                 searchTitle();
-                movieApp();
                 break;
             case 9:
                 allMovies = removeMovieByTitle();
@@ -110,7 +98,6 @@ public class MoviesApplication {
                     System.out.println("Error: movie not found!\n");
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");
-                movieApp();
                 break;
             case 10:
                 allMovies = removeMovieByCat();
@@ -120,13 +107,12 @@ public class MoviesApplication {
                     System.out.println("Error: category not found!\n");
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");
-                movieApp();
                 break;
             default:
                 System.out.println();
-                movieApp();
                 break;
         }
+        movieApp();
     }
 
     private static void printMovie(String title, String cat) {
@@ -235,7 +221,7 @@ public class MoviesApplication {
         int index = 0;
         if (!searchError) {
             for (Movie allMovie : allMovies) {
-                if (!customList[0].movieName().equalsIgnoreCase(allMovie.movieName())) {
+                if (!titlePrompt.equalsIgnoreCase(allMovie.movieName())) {
                     newList[index] = allMovie;
                     index++;
                 }
