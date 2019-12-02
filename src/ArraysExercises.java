@@ -11,8 +11,6 @@ public class ArraysExercises {
         String[] addedArray = addPerson(personArray, newPerson);
         System.out.println(Arrays.toString(addedArray));
 
-//        Problem 2
-
 
     }
 

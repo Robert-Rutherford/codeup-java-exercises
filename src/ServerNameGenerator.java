@@ -5,7 +5,7 @@ public class ServerNameGenerator {
     private static String[] adjectives = {"tired", "hungry", "angry", "happy", "sad", "colorful", "plain", "fat", "skinny", "energetic"};
 
 
-    public static String randomElement(String[] arr) {
+    private static String randomElement(String[] arr) {
         Random rand = new Random();
         int index = rand.nextInt(arr.length);
         return arr[index];
