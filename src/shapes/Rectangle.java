@@ -1,31 +1,57 @@
 package shapes;
 
-
-
 //        Inheritance and polymorphism Exercise
-public class Rectangle {
-    private int length;
-    private int width;
+//public class Rectangle {
+//    private int length;
+//    private int width;
+//
+//    public Rectangle(int Length, int Width){
+//        length = Length;
+//        width = Width;
+//    }
+//
+//    public int getLength(){
+//        return length;
+//    }
+//
+//    public int getWidth(){
+//        return width;
+//    }
+//
+//    public int getArea(){
+//        return length*width;
+//    }
+//
+//    public int getPerimeter(){
+//        return (2*length)+(2*width);
+//    }
+//
+//}
 
-    public Rectangle(int Length, int Width){
-        length = Length;
-        width = Width;
+//      Abstract Classes and Interfaces Exercise
+
+public class Rectangle extends Quadrilateral implements Measurable {
+    public Rectangle(int Width, int Length) {
+        super(Width, Length);
     }
 
-    public int getLength(){
-        return length;
+    @Override
+    public void setLength(int Length) {
+
     }
 
-    public int getWidth(){
-        return width;
+    @Override
+    public void setWidth(int Width) {
+
     }
 
-    public int getArea(){
-        return length*width;
+    @Override
+    public double getPerimeter() {
+        return 0;
     }
 
-    public int getPerimeter(){
-        return (2*length)+(2*width);
+    @Override
+    public double getArea() {
+        return 0;
     }
-
 }
