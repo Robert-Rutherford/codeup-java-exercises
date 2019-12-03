@@ -2,20 +2,12 @@ package shapes;
 
 //        Inheritance and polymorphism Exercise
 public class Rectangle {
-    private int length;
-    private int width;
+    protected int length;
+    protected int width;
 
-    public Rectangle(int Length, int Width){
-        length = Length;
-        width = Width;
-    }
-
-    public int getLength(){
-        return length;
-    }
-
-    public int getWidth(){
-        return width;
+    public Rectangle(int length, int width){
+        this.length = length;
+        this.width = width;
     }
 
     public int getArea(){
