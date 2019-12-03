@@ -4,9 +4,9 @@ import util.Input;
 
 
 public class MoviesApplication {
-    public static Input userIn = new Input();
-    public static Movie[] allMovies = MoviesArray.findAll();
-    public static Boolean searchError = false;
+    private static Input userIn = new Input();
+    private static Movie[] allMovies = MoviesArray.findAll();
+    private static Boolean searchError = false;
 
     public static void main(String[] args) {
         movieApp();
