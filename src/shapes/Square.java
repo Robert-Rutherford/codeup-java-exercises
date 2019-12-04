@@ -23,7 +23,7 @@ package shapes;
 //}
 
 //      Abstract Classes and Interfaces Exercise
-public class Square extends Quadrilateral{
+public class Square extends Quadrilateral {
 
 
     public Square(int side) {
@@ -42,11 +42,11 @@ public class Square extends Quadrilateral{
 
     @Override
     public double getPerimeter() {
-        return (2*length)+(2*width);
+        return (2 * length) + (2 * width);
     }
 
     @Override
     public double getArea() {
-        return length*width;
+        return length * width;
     }
 }

@@ -12,13 +12,12 @@ public class ShapesTest {
 
 
         //      Abstract Classes and Interfaces Exercise
-        Measurable myShape = new Rectangle(4,7);
+        Measurable myShape = new Rectangle(4, 7);
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());
         myShape = new Square(5);
         System.out.println(myShape.getArea());
         System.out.println(myShape.getPerimeter());
-
 
 
     }
