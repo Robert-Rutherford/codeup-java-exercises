@@ -1,4 +1,4 @@
-package lecture;
+package lecture.Student;
 
 public class CodeupTest {
     public static void main(String[] args) {

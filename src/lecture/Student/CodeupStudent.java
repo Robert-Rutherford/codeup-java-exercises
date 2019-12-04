@@ -1,4 +1,4 @@
-package lecture;
+package lecture.Student;
 
 public class CodeupStudent extends Student {
     public CodeupStudent(String[] information, boolean graduated) {

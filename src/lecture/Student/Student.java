@@ -1,4 +1,4 @@
-package lecture;
+package lecture.Student;
 
 abstract class Student {
     protected String firstName;
