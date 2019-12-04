@@ -2,18 +2,23 @@ package shapes;
 
 //        Inheritance and polymorphism Exercise
 public class Square extends Rectangle {
-    protected int side;
+//    protected int side;
+
         public Square(int side){
             super(side,side);
-            this.side = side;
+//            this.side = side;
         }
 
+        @Override
         public int getArea(){
-            return side*side;
+//            return side*side;
+            return super.length*super.width;
         }
 
+        @Override
         public int getPerimeter(){
-            return 4*side;
+//            return 4*side;
+            return 4*super.length;
         }
 }
 
