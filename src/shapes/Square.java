@@ -4,22 +4,22 @@ package shapes;
 public class Square extends Rectangle {
 //    protected int side;
 
-        public Square(int side){
-            super(side,side);
+    public Square(int side) {
+        super(side, side);
 //            this.side = side;
-        }
+    }
 
-        @Override
-        public int getArea(){
+    @Override
+    public int getArea() {
 //            return side*side;
-            return super.length*super.width;
-        }
+        return super.length * super.width;
+    }
 
-        @Override
-        public int getPerimeter(){
+    @Override
+    public int getPerimeter() {
 //            return 4*side;
-            return 4*super.length;
-        }
+        return 4 * super.length;
+    }
 }
 
 //      Abstract Classes and Interfaces Exercise

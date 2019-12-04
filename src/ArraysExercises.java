@@ -8,7 +8,7 @@ public class ArraysExercises {
         Person per1 = new Person("John");
         Person per2 = new Person("Bob");
         Person per3 = new Person("Phil");
-        Person[] personArray = {per1,per2,per3};
+        Person[] personArray = {per1, per2, per3};
 //        String[] personArray = {"John", "Bob", "Phil"};
         Person newPerson = new Person("Jack");
         Person[] addedArray = addPerson(personArray, newPerson);

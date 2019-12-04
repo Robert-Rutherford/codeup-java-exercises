@@ -92,18 +92,18 @@ public class MoviesApplication {
 //                for (Movie movieArray : allMovies) {
 //                    printMovie(movieArray.movieName(), movieArray.movieCat());
 //                }
-                if (!searchError){
+                if (!searchError) {
                     System.out.println("Movie Removed\n");
-                }else {
+                } else {
                     System.out.println("Error: movie not found!\n");
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");
                 break;
             case 10:
                 allMovies = removeMovieByCat();
-                if (!searchError){
+                if (!searchError) {
                     System.out.println("Movies Removed\n");
-                }else {
+                } else {
                     System.out.println("Error: category not found!\n");
                 }
                 System.out.println("*----*----*----*----*----*----*----*----*----*");

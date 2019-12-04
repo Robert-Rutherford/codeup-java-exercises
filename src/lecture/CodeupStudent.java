@@ -1,7 +1,7 @@
 package lecture;
 
 public class CodeupStudent extends Student {
-    public CodeupStudent(String[] information, boolean graduated){
+    public CodeupStudent(String[] information, boolean graduated) {
         this.firstName = information[0];
         this.lasName = information[1];
         this.cohort = information[2];
@@ -12,7 +12,7 @@ public class CodeupStudent extends Student {
 
     @Override
     public void greeting() {
-        System.out.println("Hello, "+ cohort);
+        System.out.println("Hello, " + cohort);
     }
 
     @Override

@@ -8,6 +8,8 @@ abstract class Student {
     protected Boolean graduated;
 
     public abstract void greeting();
+
     public abstract void study();
+
     public abstract Boolean giveBusinessCards();
 }
