@@ -54,7 +54,13 @@ public class Input {
 
     public int getInt() {
         System.out.println("enter a integer:");
-        return scanner.nextInt();
+//        return scanner.nextInt();
+        try{
+            return Integer.parseInt(getString());
+        } catch (NumberFormatException nfe){
+            System.out.println("Error: Not a integer input... ");
+            return getInt();
+        }
     }
 
     public double getDouble(String prompt, double min, double max) {
@@ -84,7 +90,13 @@ public class Input {
 
     public double getDouble() {
         System.out.println("Enter a double");
-        return scanner.nextDouble();
+//        return scanner.nextDouble();
+        try{
+            return Double.parseDouble(getString());
+        } catch (NumberFormatException nfe){
+            System.out.println("Error: Not a decimal input...");
+            return getDouble();
+        }
     }
 
     public void cleanLines() {
